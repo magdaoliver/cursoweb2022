@@ -1,4 +1,4 @@
-<?php   // en éste script damos valor y ordenamos la variables.
+<?php   // en Ã©ste script damos valor y ordenamos la variables.
 
 $meses = array(
 	'Enero', 'Febrero', 'Marzo', 'Abril', 
@@ -6,10 +6,10 @@ $meses = array(
 	'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
 );
 
-$numeros = array(1, 22, 23, 10, 9, 5, 70, 100, 20);
+$numeros = array(1, 22, 23, 10, 9, 5, 70, 100, 200);  //cambio el 20 por el 200
 
 rsort($numeros);
-sort($meses); //Función del array que queremos ordenar
+sort($meses); //FunciÃ³n del array que queremos ordenar
 // rsort($meses); Inverso del array
 // rsort($numeros);
 
