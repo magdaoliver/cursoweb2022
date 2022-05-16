@@ -6,7 +6,7 @@
 $semana = array('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo');
 
 # En los arrays podemos guardar cualquier tipo de dato, incluso podemos guardar un array dentro de otro. Se podria escribir el array ext conn corchetes y el interno con parentesis
-$arreglo = array('cadenas de texto', 1, array('asd', 123), true);
+$arreglo = array('cadenas de texto', 1, array('asd', 123), true); //dfdkflsds
 
 # Ejemplo en el que mostramos los dias de la semana en pantalla a partir de nuestro array llamado semana.
 echo $semana[0] . '<br />'; //Lunes
