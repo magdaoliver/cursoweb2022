@@ -11,7 +11,7 @@
 
 -- */
 
- $numero1 = 10;
+ $numero1 = 19;  //cambio el 10 por 19
  $numero2 = 6;
 
  $resultado = $numero1 ** $numero2;
