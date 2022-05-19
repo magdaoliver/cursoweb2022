@@ -10,7 +10,7 @@
 //
 $x = 3;
 
-while($x <= 13){    //también se puede
+while($x <= 13){    //también se puede poner < que 14
 	echo $x . '<br>';
 
 	$x++;
