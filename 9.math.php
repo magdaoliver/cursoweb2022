@@ -16,12 +16,12 @@ $perimetro = 2*pi()*$radio;
 // echo(round(0.49));  // returns 0
 
 # ceil() es como round() redondeo hacia arriba
-echo(ceil(0.60) . "<br>");
-echo(ceil(0.40) . "<br>");
-echo(ceil(5) . "<br>");
-echo(ceil(5.1) . "<br>");
-echo(ceil(-5.1) . "<br>");
-echo(ceil(-5.9));
+// echo(ceil(0.60) . "<br>");
+// echo(ceil(0.40) . "<br>");
+// echo(ceil(5) . "<br>");
+// echo(ceil(5.1) . "<br>");
+// echo(ceil(-5.1) . "<br>");
+// echo(ceil(-5.9));
 # floor() es como round() redondeo para abajo
 echo(floor(0.60) . "<br>");
 echo(floor(0.40) . "<br>");
