@@ -30,10 +30,10 @@ function mostrarNumero(){
 	return $numero;
 }
 
-// function mostrarNumero(){
-// 	$numero = 10;
-// 	echo $numero;
-// }
+function mostrarNumero(){
+	$numero = 10;
+	echo $numero;
+}
 
 mostrarNumero();//10
 $numero = mostrarNumero(); //Asigno $numero =10;
