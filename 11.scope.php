@@ -1,7 +1,7 @@
 <?php
 
 //SCOPE = ALCANCE
-$numero = 7; //Variable global = acceso desde cualquier parte del código excepto dentro de funciones
+$numero = 8; //Variable global = acceso desde cualquier parte del código excepto dentro de funciones
 echo $numero; //Muestro el 7
 // function mostrarNumero(){
 // 	$numero = 13;
@@ -25,19 +25,19 @@ echo $numero; //Muestro el 7
 //  mostrarNumero();
 //  echo $numero; //No se puede acceder porque la variable esta dentro de la función, necesitaremos el "return"
 
-// function mostrarNumero(){
-// 	$numero = 10;
-// 	return $numero;
-// }
+function mostrarNumero(){
+	$numero = 10;
+	return $numero;
+}
 
-// function mostrarNumero(){
-// 	$numero = 10;
-// 	echo $numero;
-// }
+function mostrarNumero(){
+	$numero = 10;
+	echo $numero;
+}
 
-// mostrarNumero();//10
-// $numero = mostrarNumero(); //Asigno $numero =10;
-// echo $numero; //10
+mostrarNumero();//10
+$numero = mostrarNumero(); //Asigno $numero =10;
+echo $numero; //10
 
 #RESUMEN:
 //1. Por parámetro para entrar la variable en la función
