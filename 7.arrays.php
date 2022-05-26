@@ -1,6 +1,6 @@
 <?php 
 
-# Los arrays son como variables que nos permiten guardar multiples valores.
+# Los Arrays son como variables que nos permiten guardar multiples valore.
 
 # Ejemplo de un arrays con los dias de la semana.
 $semana = array('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo');
