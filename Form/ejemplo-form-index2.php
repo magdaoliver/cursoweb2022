@@ -31,7 +31,7 @@
             <option value="2002">2002</option>
         </select>
         <br>
-        <label for="terminos">Aceptar Términos</label>
+        <label for="terminos">Aceptar Terminos</label>
         <input type="checkbox" name="terminos" id="terminos" value="ok">
         <br>
         <input type="submit" value="Enviar">
