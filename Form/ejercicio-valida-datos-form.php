@@ -1,6 +1,8 @@
 <?php
 
 $errores='';
+$errorNombre='';
+$errorMail='';
 
 if (isset($_POST['submit'])) {
     $nombre=$_POST['nombre'];
@@ -21,17 +23,17 @@ if (isset($_POST['submit'])) {
 
         echo 'Tu nombre es ' . $nombre . '<br>';
     } else {
-        $errores .= 'Por favor escribe un nombre <br>';
+        $errorNombre .= 'Por favor escribe un nombre <br>';
     }
     if (!empty($email)) {
         $email=filter_var($email, FILTER_SANITIZE_EMAIL);//Filtro de "sanea" el correo
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {//Filtro de "validacion" del correo
-            $errores .= 'Por favor escribe un correo valido <br>';
+            $errorMail .= 'Por favor escribe un correo valido <br>';
         } else {
             echo 'Tu correo es ' . $email . '<br>';
         }
     } else {
-        $errores .= 'Por favor escribe un correo <br>';
+        $errorMail .= 'Por favor escribe un correo <br>';
     }
 }
 
@@ -39,22 +41,26 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <title>Valida datos del formulario</title>
-    <style>
-        .error{color:red;}
-    </style>
-</head>
-<body>
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post"> 
-        <input type="text" name="nombre" placeholder="Nombre" id="">
-        <input type="text" name="email" placeholder="Email" id=""> <!--Tipo normal type="email"-->
-
-        <?php if(!empty($errores)): ?>
-            <div class="error"><?php echo $errores; ?></div>
-        <?php endif; ?>
-            
-        <input type="submit" name="submit" value="Enviar formulario" >
-    </form>
-</body>
+    <head>
+        <title>Valida datos del formulario</title>
+        <style>
+            .error{color:red;}
+        </style>
+    </head>
+    <body>
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']  ) ?>" method="post"> 
+            <input type="text" name="nombre" placeholder="Nombre"   id="">
+            <?php if(!empty($errorNombre)): ?>
+                <div class="error"><?php echo $errorNombre; ?></div>
+                <?php endif; ?>
+            <br>
+            <input type="text" name="email" placeholder="Email"     id=""> <!--Tipo normal type="email"-->
+            <br>
+            <?php if(!empty($errorMail)): ?>
+                <div class="error"><?php echo $errorMail; ?></div>
+            <?php endif; ?>
+            <br>
+            <input type="submit" name="submit" value="Enviar    formulario" >
+        </form>
+    </body>
 </html>

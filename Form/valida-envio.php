@@ -9,7 +9,7 @@
 // }
 
 #2. REVISAR SI SE HA ENVIADO EL FORMULARIO COMPROBANDO SUBMIT
-// if (isset($_POST['submit'])) {
+//  if (isset($_POST['submit'])) {
 //     echo 'Se han enviado los datos correctamente <br>';
 //     print_r($_POST['submit']);
 //     echo '<br>';

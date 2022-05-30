@@ -7,7 +7,7 @@
     <title>Ejemplo form index</title>
 </head>
 <body>
-    <form action="recibe-get.php" method="get"> <!-- con action le decimos donde guarda los datos -->
+    <form action="recibe-get.php" method="get"> <!-- con action le decimos donde guarda los datos y con el method le decimos de que forma POST/GET -->
         <input type="text" placeholder="Nombre" name="nombre" id=""> <!-- el value lo define el usuario -->
         <br>
         <label for="mujer">Mujer</label> <!-- El for del label se relaciona bon id del input -->

@@ -17,6 +17,6 @@ $sexo = $_POST['sexo'];
 $fecha = $_POST['fecha'];
 $terminos = $_POST['terminos'];
 
-echo 'Hola ' . $nombre . ' eres un ' . $sexo . ' y has escogido la fecha: '. $fecha;
+echo 'Hola ' . $nombre . ' eres un ' . $_POST['sexo'] . ' y has escogido la fecha: '. $fecha;   //se puede poner por variables o bien con la posición del arrey, como en el caso del sexo
 
 ?>
