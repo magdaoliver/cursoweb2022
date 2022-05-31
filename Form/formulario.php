@@ -14,11 +14,11 @@
         <input type="submit" name="submit" value="Enviar formulario" >
     </form>
 
-    <!-- Segundo formulario de prueba    -->
-    <!-- <form action="valida-envio.php" method="post"> 
+    <!-- Segundo formulario de prueba    --> 
+    <form action="valida-envio.php" method="post"> 
         <input type="text" name="nombre" placeholder="Nombre" id="">
         <input type="email" name="email" placeholder="Email" id="">
         <input type="submit" name="submit2" value="Enviar formulario2" >
-    </form> -->
+    </form> 
 </body>
 </html>
