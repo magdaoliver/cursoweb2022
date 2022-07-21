@@ -1,10 +1,10 @@
 <?php
-$conexion = new mysqli('localhost', 'root', '', 'prueba_mysqli');
+$conexion = new mysqli('localhost', 'root', '', 'heidisql_curso');
 
 if ($conexion->connect_errno){
 	die('Lo siento hubo un problema con el servidor');
 } else {
-	$statement = $conexion->prepare("UPDATE `ejerciciocreate` SET `nombre` = 'Marcos', `edad` = '38' WHERE `ejerciciocreate`.`ID` = 1");
+	$statement = $conexion->prepare("UPDATE `usuarios` SET `nombre` = 'Marcos' WHERE `usuarios`.`ID` = 3");
 
 	// Ejecutamos la sentencia.
 	$statement->execute();
