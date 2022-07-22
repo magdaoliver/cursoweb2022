@@ -4,13 +4,10 @@ try {
 	$conexion = new PDO('mysql:host=localhost;dbname=heidisql_curso', 'root', '');
 
 	//Prepared Statements
-	$statement = $conexion->prepare('SELECT * FROM usuarios');
+	$statement = $conexion->prepare("DELETE FROM usuarios WHERE ID=14 OR ID=15");
 	$statement->execute();
+	echo "Datos borrados correctamente";
 
-	$resultados = $statement->fetchAll();
-	foreach ($resultados as $usuario) {
-		echo $usuario['ID'] . '-' .  $usuario['Nombre'].'<br>';
-	}
 
 }catch(PDOException $e){
 	echo "Error: " . $e->getMessage();
