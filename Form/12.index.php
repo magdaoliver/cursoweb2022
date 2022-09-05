@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 		$mensaje = trim($mensaje);
 		$mensaje = stripslashes($mensaje);
 	} else {
-		$errores .= 'Por favor escribe el mensaje <br />';
+		$errores .= 'Por favor escribe el mensaje';
 	}
 
 	if(!$errores){
