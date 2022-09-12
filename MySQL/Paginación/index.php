@@ -18,13 +18,19 @@ $postPorPagina = 5;
 // Revisamos desde que articulo vamos a cargar, dependiendo de la pagina en la que se encuentre el usuario.
 # Comprobamos si la pagina en la que esta es mayor a 1, sino entonces cargamos desde el articulo 0.
 # Si la pagina es mayor a 1 entonces hacemos un calculo para saber desde que post cargaremos.
-$inicio = ($pagina < 1) ? ($pagina * $postPorPagina - $postPorPagina) : 0 ;
+$inicio = ($pagina > 1) ? ($pagina * $postPorPagina - $postPorPagina) : 0 ;
 
 // Preparamos la consulta SQL
 $articulos = $conexion->prepare("
-	SELECT SQL_CALC_FOUND_ROWS * FROM articulos 
+	SELECT SQL_CALC_FOUND_ROWS * FROM articulos
 	LIMIT $inicio, $postPorPagina
 ");
+
+// Si queremos que se muestren los artículos en orden desde el último que se ha creado-Orden descendente
+// $articulos = $conexion->prepare("
+// 	SELECT SQL_CALC_FOUND_ROWS * FROM articulos ORDER BY id DESC
+// 	LIMIT $inicio, $postPorPagina
+// ");
 
 // Ejecutamos la consulta
 $articulos->execute();
