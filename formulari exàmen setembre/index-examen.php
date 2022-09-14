@@ -5,8 +5,8 @@
 
 	if (isset($_POST['submit'])) {
 		//Recopilamos los datos que nos dan a traves del formulario por el metodo POST, lo recibimos en la variable array asociativo $_POST
-		$nombre = $_POST['nom'];
-		$correo = $_POST['correu'];
+		$nom = $_POST['nom'];
+		$correu = $_POST['correu'];
 		
 
 		// Sanear el nombre
@@ -43,9 +43,9 @@
 
 	if ($enviado == 'true'){
 		try {
-			$conexion = new PDO('mysql:host=localhost;dbname=prova-setembre', 'root', '');
+			$conexion = new PDO('mysql:host=localhost;dbname=prova_setembre', 'root', '');
 			echo "Tot OK conectat </br>" ;
-			$statement = $conexion->prepare('INSERT INTO taula.prova VALUES (null, :nom, :correu)');
+			$statement = $conexion->prepare('INSERT INTO taula_prova VALUES (null, :nom, :correu)');
 			echo "OK sentencia correcta </br>";
 			$statement->execute(
 				array(':nom'=> $nom, ':correu'=> $correu)
