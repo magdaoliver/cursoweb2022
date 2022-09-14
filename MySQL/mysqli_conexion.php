@@ -8,3 +8,4 @@ if ($conexion->connect_errno){
 	// Codigo
 	echo "Conexion sin errores a HEIDISQL_CURSO";
 }
+?>
