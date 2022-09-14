@@ -4,7 +4,7 @@
 	$enviado = '';
 
 	if (isset($_POST['submit'])) {
-		//Recopilamos los datos que nos dan a través del formulario por el método POST, lo recibimos en la variable array asociativo $_POST
+		//Recopilamos los datos que nos dan a traves del formulario por el metodo POST, lo recibimos en la variable array asociativo $_POST
 		$nombre = $_POST['nombre'];
 		$correo = $_POST['correo'];
 		$mensaje = $_POST['mensaje'];
@@ -41,7 +41,7 @@
 			$mensaje_preparado .= "Correo: $correo \n";
 			$mensaje_preparado .= "Mensaje: " . $mensaje;
 
-			mail($enviar_a, $asunto, $mensaje_preparado);
+			// mail($enviar_a, $asunto, $mensaje_preparado);
 			$enviado = 'true';
 		}
 

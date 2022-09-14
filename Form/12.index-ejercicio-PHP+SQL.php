@@ -48,19 +48,19 @@ if (isset($_POST['submit'])) {
 
 require 'index.view.php';
 
-if ($enviado == 'true'){
-	try {
+if ($enviado == 'true'){    
+	try {   //con el try prueba el programa y, si hay errores o excepciones los muestra
 		$conexion = new PDO('mysql:host=localhost;dbname=form_db', 'root', '');
 	
-		//Prepared Statements
+		//Prepared Statements(forma + segura de recibir datos pq evita insertar codigo).Comprueba que la sentencia es correcta
 		$statement = $conexion->prepare('INSERT INTO usuarios_form VALUES (null,:nombre, :correo, :mensaje)');
-		$statement->execute(
-            array(':nombre'=> $nombre, ':correo'=> $correo, ':mensaje'=> $mensaje)
+		$statement->execute(   //ejecuta
+            array(':nombre'=> $nombre, ':correo'=> $correo, ':mensaje'=> $mensaje) //clave-valor,clave-valor
         );
 		echo "Datos insertados correctamente";
 	
 	
-	}catch(PDOException $e){
+	}catch(PDOException $e){  //si algo no funciona va al catch
 		echo "Error: " . $e->getMessage();
 	}
 }
