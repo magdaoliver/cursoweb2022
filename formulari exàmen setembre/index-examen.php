@@ -3,7 +3,7 @@
 	$errores = '';
 	$enviado = '';
 
-	if (isset($_POST['submit'])) {
+	if (isset($_POST['submit'])) {    //primero recibimos los datos
 		//Recopilamos los datos que nos dan a traves del formulario por el metodo POST, lo recibimos en la variable array asociativo $_POST
 		$nom = $_POST['nom'];
 		$correu = $_POST['correu'];
@@ -34,7 +34,7 @@
 			
 
 			// mail($enviar_a, $asunto, $mensaje_preparado);
-			$enviado = 'true';
+			$enviado = 'true';   //segundo enviamos los datos. Si no hay errores el formulario está preparado
 		}
 
 	}
@@ -51,6 +51,7 @@
 				array(':nom'=> $nom, ':correu'=> $correu)
 			);
 			
+
 			echo "OK Tot enviat";
 
 		} catch(PDOException $e){
