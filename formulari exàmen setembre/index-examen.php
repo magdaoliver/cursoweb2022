@@ -50,6 +50,7 @@
 			$statement->execute(
 				array(':nom'=> $nom, ':correu'=> $correu)
 			);
+			
 			echo "OK Tot enviat";
 
 		} catch(PDOException $e){
