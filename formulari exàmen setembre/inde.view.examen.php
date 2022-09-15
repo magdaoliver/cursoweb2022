@@ -9,7 +9,8 @@
 <body>
 	<div class="wrap">
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-			<input type="text" class="form-control" id="nom" name="nom" placeholder="Nom:" value="<?php if(!$enviado && isset($nom)) echo $nom ?>">
+			<input type="text" class="form-control" id="nom" name="nom" placeholder="Nom:" value="<?php if
+			(!$enviado && isset($nom)) echo $nom ?>">
 
 			<input type="text" class="form-control" id="correu" name="correu" placeholder="Correu:" value="<?php if(!$enviado && isset($correu)) echo $correu ?>">
 
